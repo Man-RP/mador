@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "mador",
+	"webDir": "build",
+	"bundledWebRuntime": false
+}

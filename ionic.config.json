@@ -1,0 +1,7 @@
+{
+  "name": "mador",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
