@@ -1,4 +1,3 @@
-import { Redirect, Route } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -7,31 +6,28 @@ import {
   IonTabBar,
   IonTabButton,
   IonTabs,
-} from '@ionic/react';
-import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
-import Tab2 from './pages/Tab2';
-import Tab3 from './pages/Tab3';
-
+} from "@ionic/react";
+import { IonReactRouter } from "@ionic/react-router";
 /* Core CSS required for Ionic components to work properly */
-import '@ionic/react/css/core.css';
-
+import "@ionic/react/css/core.css";
+import "@ionic/react/css/display.css";
+import "@ionic/react/css/flex-utils.css";
+import "@ionic/react/css/float-elements.css";
 /* Basic CSS for apps built with Ionic */
-import '@ionic/react/css/normalize.css';
-import '@ionic/react/css/structure.css';
-import '@ionic/react/css/typography.css';
-
+import "@ionic/react/css/normalize.css";
 /* Optional CSS utils that can be commented out */
-import '@ionic/react/css/padding.css';
-import '@ionic/react/css/float-elements.css';
-import '@ionic/react/css/text-alignment.css';
-import '@ionic/react/css/text-transformation.css';
-import '@ionic/react/css/flex-utils.css';
-import '@ionic/react/css/display.css';
-
+import "@ionic/react/css/padding.css";
+import "@ionic/react/css/structure.css";
+import "@ionic/react/css/text-alignment.css";
+import "@ionic/react/css/text-transformation.css";
+import "@ionic/react/css/typography.css";
+import { homeSharp, personSharp, todaySharp } from "ionicons/icons";
+import { Redirect, Route } from "react-router-dom";
+import Tab1 from "./pages/Home";
+import Tab3 from "./pages/Person";
+import Tab2 from "./pages/Schedule";
 /* Theme variables */
-import './theme/variables.css';
+import "./theme/variables.css";
 
 const App: React.FC = () => (
   <IonApp>
@@ -51,18 +47,18 @@ const App: React.FC = () => (
             <Redirect to="/tab1" />
           </Route>
         </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+        <IonTabBar slot="bottom" dir="rtl">
           <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+            <IonIcon icon={homeSharp} />
+            <IonLabel>בית</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonIcon icon={todaySharp} />
+            <IonLabel>לו"ז</IonLabel>
           </IonTabButton>
           <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon icon={square} />
-            <IonLabel>Tab 3</IonLabel>
+            <IonIcon icon={personSharp} />
+            <IonLabel>אישי</IonLabel>
           </IonTabButton>
         </IonTabBar>
       </IonTabs>
