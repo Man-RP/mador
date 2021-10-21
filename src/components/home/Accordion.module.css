@@ -1,0 +1,23 @@
+.Collapsible {
+  /* background: cyan; */
+  direction: rtl;
+}
+
+.Collapsible__trigger {
+  background-image: var(--ion-color-primary-gradient);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 5.47vh;
+  border-radius: 4px 4px 0 0;
+  padding: 0 16px;
+  color: #fff;
+  font-size: 2.19vh;
+}
+
+.Collapsible__contentOuter {
+  padding-top: 8px;
+}
+
+.Collapsible__contentInner {
+}
